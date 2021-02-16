@@ -40,4 +40,15 @@ class CryptoApi {
 
     return secureRandom;
   }
+
+  static Uint8List rsaSign(RSAPrivateKey privateKey, Uint8List dataToSign) {
+    final signer = RSASigner(SHA256Digest(), '0609608648016503040201');
+
+    signer.init(
+        true, PrivateKeyParameter<RSAPrivateKey>(privateKey)); // true=sign
+
+    final sig = signer.generateSignature(dataToSign);
+
+    return sig.bytes;
+  }
 }
