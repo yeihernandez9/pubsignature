@@ -3,7 +3,7 @@ import 'dart:typed_data';
 
 import "package:pointycastle/export.dart";
 
-class Crypto {
+class CryptoApi {
   static AsymmetricKeyPair<RSAPublicKey, RSAPrivateKey> generateRSAkeyPair(
       SecureRandom secureRandom,
       {int bitLength = 2048}) {
