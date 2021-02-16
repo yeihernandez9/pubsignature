@@ -26,7 +26,7 @@ class Crypto {
     return AsymmetricKeyPair<RSAPublicKey, RSAPrivateKey>(myPublic, myPrivate);
   }
 
-  SecureRandom exampleSecureRandom() {
+  static SecureRandom exampleSecureRandom() {
     final secureRandom = FortunaRandom();
 
     final seedSource = Random.secure();
