@@ -52,7 +52,7 @@ class CryptoApi {
     return sig.bytes;
   }
 
-  bool rsaVerify(
+  static bool rsaVerify(
       RSAPublicKey publicKey, Uint8List signedData, Uint8List signature) {
     final sig = RSASignature(signature);
 
