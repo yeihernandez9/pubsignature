@@ -36,6 +36,8 @@ class CryptoApi {
     }
     secureRandom.seed(KeyParameter(Uint8List.fromList(seeds)));
 
+    print("salida ${secureRandom}");
+
     return secureRandom;
   }
 }
